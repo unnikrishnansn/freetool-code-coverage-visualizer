@@ -16,6 +16,7 @@ To utilize the extension, follow these steps:
 2. **Visual Studio Extension (VSIX)**:
    - Navigate to the `VSIX` folder within the repository.
    - Locate the `.vsix` file, which serves as the installer for the extension.
+   - OR Download from https://marketplace.visualstudio.com/items?itemName=UnnikrishnanSNamboodiri.freetoolvisualizer
 
 3. **Installation**: 
    - Double-click on the `.vsix` file to initiate the installation process.
