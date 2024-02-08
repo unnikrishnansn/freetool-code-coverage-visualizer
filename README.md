@@ -40,6 +40,7 @@ Once the extension is installed, you can utilize it within Visual Studio to gene
 4. **View Reports**:
    - After the generation process is complete, the reports will be available for viewing within Visual Studio.
    - Analyze the reports to gain insights into code coverage metrics and identify areas for improvement.
+![image](https://github.com/unnikrishnansn/freetool-code-coverage-visualizer/assets/159100371/01c31bb5-4d97-4944-94c5-3dd0e7f728a5)
 
 ### Contribution:
 
