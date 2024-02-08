@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!--  This is the file that defines the actual layout and type of the commands.
+        It is divided in different sections (e.g. command definition, command
+        placement, ...), with each defining a specific set of properties.
+        See the comment before each section for more details about how to
+        use it. -->
+
+	<!--  The VSCT compiler (the tool that translates this file into the binary
+        format that VisualStudio will consume) has the ability to run a preprocessor
+        on the vsct file; this preprocessor is (usually) the C++ preprocessor, so
+        it is possible to define includes and macros with the same syntax used
+        in C++ files. Using this ability of the compiler here, we include some files
+        defining some of the constants that we will use inside the file. -->
+
+	<!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
+	<Extern href="stdidcmd.h" />
+
+	<!--This header contains the command ids for the menus provided by the shell. -->
+	<Extern href="vsshlids.h" />
+	<Include href="KnownImageIds.vsct"/>
+	<!--The Commands section is where commands, menus, and menu groups are defined.
+      This section uses a Guid to identify the package that provides the command defined inside it. -->
+	<Commands package="guidCoverageViewerPackage">
+		<Bitmaps>
+			<Bitmap guid="testIcon" href="Resources\favicon.ico" usedList="testIcon1"/>
+		</Bitmaps>
+		<Buttons>
+			<Button guid="guidCoverageViewerPackageCmdSet" id="ShowToolWindowId" priority="0x0100" type="Button">
+				<!-- parent is View > Other Windows -->
+				<Parent guid="guidSHLMainMenu" id="IDG_VS_MM_FULLSCREENBAR"/>
+				<Icon guid="testIcon" id="testIcon1" />
+				<!--<CommandFlag>IconIsMoniker</CommandFlag>-->
+				<Strings>
+					<ButtonText>Coverage Visualizer</ButtonText>
+				</Strings>
+			</Button>
+		</Buttons>
+	</Commands>
+
+	<Symbols>
+		<GuidSymbol name="testIcon" value="{5658A9FA-CE6E-47FF-8A2B-EAE818079BEE}">
+			<IDSymbol name="testIcon1" value="1" />
+		</GuidSymbol>
+
+		<GuidSymbol name="guidCoverageViewerPackage" value="{6e3b2e95-902b-4385-a966-30c06ab3c7a6}" />
+
+		<GuidSymbol name="guidCoverageViewerPackageCmdSet" value="{9cc1062b-4c82-46d2-adcb-f5c17d55fb85}">
+			<IDSymbol name="ShowToolWindowId" value="0x0100" />
+		</GuidSymbol>
+	</Symbols>
+</CommandTable>
